@@ -1,1 +1,1 @@
-🌐 [emanoelInC.github.io](https://EmanoelInC.github.io)
+Portfólio de Emanoel Cavalcante — [emanoelinc.github.io](https://emanoelinc.github.io)
