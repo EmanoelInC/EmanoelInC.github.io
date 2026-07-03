@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Emanoel Cavalcante — Analista de Dados & BI</title>
+<title>Emanoel Cavalcante — Estrategista de Negócios e Inteligência Operacional</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
@@ -102,18 +102,29 @@
   .skill-list li:last-child { border: none; }
   .skill-level { font-size: 0.68rem; background: var(--teal-light); color: var(--teal-dark); padding: 2px 7px; border-radius: 100px; }
 
-  /* PROJECTS */
+  /* PROJECTS GRID (Used for Portfólio and Prática) */
   .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .proj-link-wrapper { text-decoration: none; color: inherit; display: block; }
-  .proj-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; transition: border-color 0.2s; height: 100%; }
+  .proj-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; transition: border-color 0.2s; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
   .proj-card:hover { border-color: var(--teal); }
   .proj-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
   .proj-icon { width: 42px; height: 42px; border-radius: 11px; background: var(--teal-light); display: flex; align-items: center; justify-content: center; font-size: 1.15rem; }
   .proj-badge { font-size: 0.68rem; font-weight: 500; background: var(--teal-light); color: var(--teal-dark); padding: 3px 10px; border-radius: 100px; }
-  .proj-card h3 { font-size: 0.92rem; font-weight: 500; margin-bottom: 0.5rem; }
-  .proj-card p { font-size: 0.83rem; color: var(--ink-muted); line-height: 1.65; margin-bottom: 1rem; }
+  .proj-card h3 { font-size: 0.92rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--ink); }
+  .proj-card p { font-size: 0.83rem; color: var(--ink-muted); line-height: 1.65; margin-bottom: 1rem; flex-grow: 1; }
   .proj-langs { display: flex; flex-wrap: wrap; gap: 5px; }
   .lang-pill { font-size: 0.68rem; background: var(--surface); border: 1px solid var(--border-strong); color: var(--ink-muted); padding: 2px 9px; border-radius: 100px; }
+
+  /* CASE STUDIES STYLE */
+  .cases-list { display: flex; flex-direction: column; gap: 1.5rem; }
+  .case-row { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem; display: grid; grid-template-columns: 220px 1fr; gap: 2rem; }
+  .case-meta { display: flex; flex-direction: column; gap: 0.75rem; }
+  .case-meta h3 { font-family: 'DM Serif Display', serif; font-size: 1.15rem; line-height: 1.3; color: var(--ink); }
+  .case-badge { font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; background: var(--teal-light); color: var(--teal-dark); padding: 4px 12px; border-radius: 100px; width: fit-content; }
+  .case-content { display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.88rem; }
+  .case-step { color: var(--ink-muted); line-height: 1.6; }
+  .case-step strong { color: var(--ink); font-weight: 500; }
+  .case-result-tag { background: var(--teal-light); border-left: 3px solid var(--teal); color: var(--teal-dark); padding: 0.5rem 0.75rem; font-size: 0.85rem; border-radius: 0 8px 8px 0; margin-top: 4px; }
 
   /* CERTS */
   .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
@@ -138,6 +149,7 @@
     .hero { grid-template-columns: 1fr; }
     .hero-card { display: none; }
     .projects-grid { grid-template-columns: 1fr; }
+    .case-row { grid-template-columns: 1fr; gap: 1rem; padding: 1.25rem; }
     nav .nav-links { display: none; }
     .contact-wrap { padding: 2.5rem 1.5rem; }
   }
@@ -150,8 +162,9 @@
   <ul class="nav-links">
     <li><a href="#trajetoria">Trajetória</a></li>
     <li><a href="#habilidades">Habilidades</a></li>
-    <li><a href="#projetos">Projetos</a></li>
-    <li><a href="#habilidades-projetos">Habilidades</a></li>
+    <li><a href="#casos">Estudos de Caso</a></li>
+    <li><a href="#habilidades-projetos">Demonstração Técnica</a></li>
+    <li><a href="#projetos">Portfólio</a></li>
     <li><a href="#certificacoes">Certificações</a></li>
   </ul>
   <a href="mailto:einaciocavalcante@gmail.com" class="nav-cta">Contato</a>
@@ -163,7 +176,7 @@
     <div class="hero-eyebrow">Aberto a novas oportunidades</div>
     <h1>Emanoel<br><em>Cavalcante</em></h1>
     <p class="hero-sub">
-      Profissional com <strong>quase 7 anos de experiência</strong> construída ao longo de três fases: operações logísticas de alta performance, gestão administrativa, mais recentemente, <strong>análise de negócios e inteligência de mercado</strong>. Transformando dados em decisões que geram resultado real.
+      <strong>Estrategista de Negócios e Inteligência Operacional</strong> com quase 7 anos de experiência. Especialista em transformar dados complexos em automações inteligentes e soluções táticas para o mercado farmacêutico e cadeias logísticas de alta performance.
     </p>
     <div class="hero-actions">
       <a href="https://linkedin.com/in/emanoel-cavalcante-admteclog" class="btn-primary" target="_blank">Ver LinkedIn</a>
@@ -176,15 +189,15 @@
     <h2>Emanoel Cavalcante</h2>
     <p class="role">📍 São Cristóvão, Rio de Janeiro</p>
     <div class="stat-row-hero">
-      <div class="stat-mini"><div class="num">~6</div><div class="lbl">anos de exp.</div></div>
-      <div class="stat-mini"><div class="num">3</div><div class="lbl">empresas</div></div>
-      <div class="stat-mini"><div class="num">10+</div><div class="lbl">certificações</div></div>
-      <div class="stat-mini"><div class="num">GTI</div><div class="lbl">Veiga de Almeida</div></div>
+      <div class="stat-mini"><div class="num">~7</div><div class="lbl">anos de exp.</div></div>
+      <div class="stat-mini"><div class="num">SQL</div><div class="lbl">Engineers</div></div>
+      <div class="stat-mini"><div class="num">99.7%</div><div class="lbl">SLA Max</div></div>
+      <div class="stat-mini"><div class="num">GTI</div><div class="lbl">UVA</div></div>
     </div>
     <div class="tag-row">
+      <span class="tag">SQL / Python</span>
       <span class="tag">Power BI</span>
-      <span class="tag">Python</span>
-      <span class="tag">Excel</span>
+      <span class="tag">Data Engineering</span>
       <span class="tag">Logística</span>
       <span class="tag">Farma</span>
     </div>
@@ -200,7 +213,6 @@
   <p class="section-intro">Uma carreira construída do chão de fábrica ao estratégico — passando por operações logísticas com grandes marcas até inteligência de mercado no varejo farmacêutico.</p>
 
   <div class="timeline">
-
     <div class="tl-item">
       <div class="tl-dot active"></div>
       <p class="tl-period">Jul 2025 – Jun 2026 · 1 ano · Híbrido</p>
@@ -211,7 +223,7 @@
       </div>
       <div class="tl-desc">
         <p>Responsável por gerar diagnósticos precisos para orientar planos de ação e melhoria de resultados em toda a rede. O trabalho envolveu análise profunda de indicadores comerciais e operacionais, com foco em vendas, margem, CMV, estoque e ruptura.</p>
-        <p>Desenvolveu relatórios executivos e dashboards visuais para suporte à tomada de decisão, além de treinar equipes ogaria e comerciais e acompanhamento direcionado de metas de performance.</p>
+        <p>Desenvolveu relatórios executivos e dashboards visuais para suporte à tomada de decisão, além de treinar equipes de drogaria e comerciais e acompanhamento direcionado de metas de performance.</p>
       </div>
       <ul class="tl-bullets">
         <li>Estudos de rentabilidade por categoria, produto e canal de venda</li>
@@ -235,50 +247,19 @@
       <p class="tl-role">Analista Administrativo / Logístico</p>
       <p class="tl-company">ID Logistics Brasil · Rio de Janeiro</p>
       <div class="tl-highlight">
-        Focal da operação Ferrero: mais de 2.000 caixas e 30–70 guias de preparação por transferência, com 100% de conformidade em todas as auditorias internas e externas realizadas durante o período.
+        Focal da operation Ferrero: mais de 2.000 caixas e 30–70 guias de preparação por transferência, com 100% de conformidade em todas as auditorias internas e externas realizadas durante o período.
       </div>
       <div class="tl-desc">
         <p>Gerenciamento completo das operações de Cross-Docking para grandes marcas — Ferrero, Danone, Nutricia e Cologist. Responsabilidades incluíam controle de notas fiscais, inventário de produtos, emissão de guias de preparação, acompanhamento diário da operação com status em porcentagem e controle de expedição.</p>
         <p>Utilizava planilhas Excel e o sistema TMWS para importação de arquivos, abertura de ilhas, download de relatórios, cadastramento de EANs e auditorias de carga. Realizava controle de temperatura via Sitrad, checklists, litígios, ocorrências, conferências de transportadoras, viagens paradas, reentregas e devoluções para fábrica.</p>
-        <p>Também atuou com marcas como Lindt, Natural One, Regina, K-happy, Abbrasil e outras, mantendo contato direto com promotores e auditores.</p>
       </div>
-      <ul class="tl-bullets">
-        <li>Embaixador do programa MyIDea desde 2023 — promovendo engajamento e implementação de ideias</li>
-        <li>Coordenador da Brigada de Incêndio em 2024, com inspeções e treinamentos de primeiros socorros</li>
-        <li>Brigadista do condomínio em 2024, reforçando expertise em segurança</li>
-        <li>Suporte em auditorias internas e externas com foco em eficiência operacional</li>
-      </ul>
       <div class="tl-tags">
         <span class="tl-tag">TMWS</span><span class="tl-tag">Workfront</span>
         <span class="tl-tag">Sitrad</span><span class="tl-tag">Cross-Docking</span>
         <span class="tl-tag">Ferrero</span><span class="tl-tag">Danone</span>
         <span class="tl-tag">Auditoria</span><span class="tl-tag">Inventário</span>
-        <span class="tl-tag">Controle de NF</span><span class="tl-tag">Expedição</span>
       </div>
     </div>
-
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <p class="tl-period">Nov 2019 – Jan 2021 · 1 ano e 3 meses · Presencial</p>
-      <p class="tl-role">Assistente de Produção</p>
-      <p class="tl-company">ID Logistics Brasil · Rio de Janeiro</p>
-      <div class="tl-desc">
-        <p>Início da trajetória na ID Logistics com atuação direta em operação de Cross-Docking para Danone, Cologist, Nutricia e Ferrero. O foco foi aprender e dominar os 360° do processo logístico — de ponta a ponta.</p>
-      </div>
-      <ul class="tl-bullets">
-        <li>Preparação, auditoria, conferência e identificação de cargas via TMWS</li>
-        <li>Expedição com seleção via ID ROTA, escala de carregamento e checklists manual e eletrônico</li>
-        <li>Conferência em doca com aplicação das "Regras de Ouro" para 100% de segurança</li>
-        <li>Controle de estoque, picking, triagem de avarias e gestão de devoluções para fábrica</li>
-        <li>Recebimento de carga, retorno de rua e preparação de devoluções</li>
-      </ul>
-      <div class="tl-tags">
-        <span class="tl-tag">TMWS</span><span class="tl-tag">Picking</span>
-        <span class="tl-tag">Expedição</span><span class="tl-tag">Controle de Estoque</span>
-        <span class="tl-tag">Auditoria de Carga</span>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -296,9 +277,9 @@
       <ul class="skill-list">
         <li>Power BI <span class="skill-level">Avançado</span></li>
         <li>Power Query <span class="skill-level">Avançado</span></li>
+        <li>SQL (CTEs, Windows) <span class="skill-level">Avançado</span></li>
         <li>Excel Avançado <span class="skill-level">Avançado</span></li>
-        <li>DAX <span class="skill-level">Intermediário</span></li>
-        <li>Python / Pandas <span class="skill-level">Básico</span></li>
+        <li>Python / Pandas <span class="skill-level">Intermediário</span></li>
       </ul>
     </div>
     <div class="skill-card">
@@ -307,20 +288,18 @@
       <ul class="skill-list">
         <li>B2Farma</li>
         <li>PEC Febrafar</li>
-        <li>Bússola IQVIA / Close Up</li>
+        <li>Bússola IQVIA</li>
         <li>Orion</li>
-        <li>System Analyst</li>
       </ul>
     </div>
     <div class="skill-card">
       <div class="skill-icon">🚚</div>
       <h3>Logística & Ops</h3>
       <ul class="skill-list">
-        <li>TMWS</li>
+        <li>TMWS / WMS</li>
         <li>Workfront</li>
         <li>Sitrad</li>
-        <li>Cross-Docking / WMS</li>
-        <li>Controle de Inventário</li>
+        <li>Cross-Docking</li>
       </ul>
     </div>
     <div class="skill-card">
@@ -329,8 +308,7 @@
       <ul class="skill-list">
         <li>Curva ABC/D</li>
         <li>CMV, Margem & Ruptura</li>
-        <li>Análises MoM / YoY / YTD</li>
-        <li>KPIs & Indicadores</li>
+        <li>MoM / YoY / YTD</li>
         <li>Relatórios Executivos</li>
       </ul>
     </div>
@@ -349,10 +327,9 @@
       <h3>Gestão & Soft Skills</h3>
       <ul class="skill-list">
         <li>Gestão Ágil</li>
-        <li>Comunicação entre áreas</li>
         <li>Acompanhamento de SLA</li>
         <li>Treinamento de equipes</li>
-        <li>Tomada de decisão por dados</li>
+        <li>Cultura Analytics</li>
       </ul>
     </div>
   </div>
@@ -360,7 +337,160 @@
 
 <hr class="divider">
 
-<!-- PROJETOS -->
+<!-- ESTUDOS DE CASO & RESULTADOS -->
+<section id="casos">
+  <p class="section-label">Performance</p>
+  <h2 class="section-title">Estudos de Caso & Resultados</h2>
+  <p class="section-intro">Impactos de negócios reais e quantificáveis documentados a partir de inteligência analítica, engenharia de dados e governança operacional.</p>
+  
+  <div class="cases-list">
+    <!-- CASO 1 -->
+    <div class="case-row">
+      <div class="case-meta">
+        <span class="case-badge">Mercado Farma</span>
+        <h3>Modelagem Comercial Preditiva</h3>
+      </div>
+      <div class="case-content">
+        <p class="case-step"><strong>Contexto:</strong> Planejamento e acompanhamento estático de metas comerciais em redes associadas com distorções de estoque.</p>
+        <p class="case-step"><strong>Ação:</strong> Desenvolvimento de pipeline analítico no repositório <code>simulador-metas-varejo</code> baseado no arquivo <em>'Simulador Metas MAIO 26.xlsx'</em>, processando históricos e aplicando médias móveis de 3 meses para prever comportamento de compra por filial.</p>
+        <div class="case-result-tag"><strong>Resultado:</strong> Relatórios gerenciais ágeis com métricas MoM, YoY e YTD que garantiram rápido direcionamento tático para a diretoria comercial.</div>
+      </div>
+    </div>
+
+    <!-- CASO 2 -->
+    <div class="case-row">
+      <div class="case-meta">
+        <span class="case-badge">Finanças</span>
+        <h3>Governança e Controle de Markup</h3>
+      </div>
+      <div class="case-content">
+        <p class="case-step"><strong>Contexto:</strong> Risco de perda de rentabilidade em filiais devido à flutuação de preços e falta de travas sistêmicas no mix.</p>
+        <p class="case-step"><strong>Ação:</strong> Estruturação de matrizes de cruzamento de faturamento vs custos das lojas, aplicando validações automatizadas para vincular o <strong>CMV real de 65,2%</strong> à garantia de uma <strong>Margem de Lucro Bruto alvo de 34,8%</strong> (Filial Rosário).</p>
+        <div class="case-result-tag"><strong>Resultado:</strong> Prevenção ativa de quebras de margem, eliminação de faturamentos deficitários e cumprimento do orçamento anual.</div>
+      </div>
+    </div>
+
+    <!-- CASO 3 -->
+    <div class="case-row">
+      <div class="case-meta">
+        <span class="case-badge">Cultura de Dados</span>
+        <h3>Desdobramento & Data Literacy</h3>
+      </div>
+      <div class="case-content">
+        <p class="case-step"><strong>Contexto:</strong> Desconexão entre relatórios executivos e força de vendas na ponta, gerando desalinhamento de metas.</p>
+        <p class="case-step"><strong>Ação:</strong> Construção de algoritmo de distribuição proporcional baseado no peso real de cada filial e histórico individual das equipes.</p>
+        <div class="case-result-tag"><strong>Resultado:</strong> Implementação do conceito de <em>Data Literacy</em> (letramento de dados) na ponta, traduzindo dados analíticos em metas claras, transparentes e atingíveis para o time comercial.</div>
+      </div>
+    </div>
+
+    <!-- CASO 4 -->
+    <div class="case-row">
+      <div class="case-meta">
+        <span class="case-badge">Logística Lean</span>
+        <h3>Cadeia Fria & Avaria Zero</h3>
+      </div>
+      <div class="case-content">
+        <p class="case-step"><strong>Contexto:</strong> Gestão de Cross-Docking de alta criticidade para grandes contas mundiais (Ferrero, Danone, Nutricia).</p>
+        <p class="case-step"><strong>Ação:</strong> Centralização das métricas no painel de controle <em>'COCKPIT CDDNPA - MAI 2025.xlsx'</em> utilizando ferramentas Lean Six Sigma (Ishikawa e 5 Porquês) para mitigar quebras físicas e sistêmicas.</p>
+        <div class="case-result-tag"><strong>Resultado:</strong> Consecução do marco histórico de <strong>R$ 0,00 em avarias por 5 meses consecutivos</strong> na conta Ferrero, mantendo 100% de conformidade em todas as auditorias e assegurando a movimentação segura de 1.515.302 toneladas no período.</div>
+      </div>
+    </div>
+
+    <!-- CASO 5 -->
+    <div class="case-row">
+      <div class="case-meta">
+        <span class="case-badge">Data Engineering</span>
+        <h3>Auditoria de SLAs Contratuais</h3>
+      </div>
+      <div class="case-content">
+        <p class="case-step"><strong>Contexto:</strong> Risco de multas contratuais milionárias (Penalidades LTPO) por quebras de janelas horárias em modelo Open Book.</p>
+        <p class="case-step"><strong>Ação:</strong> Criação de consultas avançadas em SQL unindo CTEs e Window Functions (repositório <code>engenharia-dados-cockpit-sla</code>) para auditar dados de pátio extraídos do TMWS e WMS Infolog.</p>
+        <div class="case-result-tag"><strong>Resultado:</strong> Garantia de 100% de conformidade de horário nas janelas de recebimento (Inbound) e expedição (Outbound), consolidando um índice de nível de serviço geral (iDeliver) de <strong>99,73% e zerando a aplicação de penalidades</strong> financeiras.</div>
+      </div>
+    </div>
+
+    <!-- CASO 6 -->
+    <div class="case-row">
+      <div class="case-meta">
+        <span class="case-badge">Eficiência</span>
+        <h3>Otimização de Ativos e Frota</h3>
+      </div>
+      <div class="case-content">
+        <p class="case-step"><strong>Contexto:</strong> Alto índice de ociosidade operacional motivado por veículos ausentes, desalinhados ou com problemas mecânicos crônicos.</p>
+        <p class="case-step"><strong>Ação:</strong> Condução de mapeamentos analíticos e diagnósticos diários consolidados no report <em>'REUNIÃO DE PERFORMANCE OPERACIONAL CDDNPA MAI25.pptx'</em> para cobrança ágil de planos de ação dos parceiros.</p>
+        <div class="case-result-tag"><strong>Resultado:</strong> Otimização de quase 50% na eficiência de disponibilidade rodoviária, derrubando o índice de frotas com problemas ou paradas de <strong>116 caminhões em Abril para apenas 63 caminhões em Maio</strong>.</div>
+      </div>
+    </div>
+
+    <!-- CASO 7 -->
+    <div class="case-row">
+      <div class="case-meta">
+        <span class="case-badge">Advanced Analytics</span>
+        <h3>Triagem de Cadeia Reversa</h3>
+      </div>
+      <div class="case-content">
+        <p class="case-step"><strong>Contexto:</strong> Instabilidade e custos críticos gerados por volume elevado de devoluções e recusas de clientes (retorno de rua).</p>
+        <p class="case-step"><strong>Ação:</strong> Arquitetura do repositório <code>analise-causa-raiz-operacoes</code> com scripts em Python (Pandas/Seaborn) para processamento em massa de <strong>123.430 toneladas de retorno de rua</strong> (equivalente a 23.764 caixas).</p>
+        <div class="case-result-tag"><strong>Resultado:</strong> Geração automatizada de gráficos de Pareto e matrizes de dispersão estatísticas, isolando os principais motivos de recusa na rua e direcionando melhorias nos processos comerciais e de faturamento.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- DEMONSTRAÇÃO DE HABILIDADES PRÁTICAS -->
+<section id="habilidades-projetos">
+  <p class="section-label">Demonstração Técnica</p>
+  <h2 class="section-title">Habilidades em prática</h2>
+  <p class="section-intro">Projetos desenvolvidos para demonstrar domínio técnico em SQL, Power BI, automação, Excel Avançado e gestão de serviços ITIL — cada um com código real e documentação completa.</p>
+  <div class="projects-grid">
+    <div class="proj-card">
+      <div class="proj-header"><div class="proj-icon">🗄️</div></div>
+      <h3><a href="https://github.com/EmanoelInC/analise-sql-operacoes" target="_blank" style="color:inherit;text-decoration:none">analise-sql-operacoes</a></h3>
+      <p>6 consultas SQL analíticas cobrindo SLA, curva ABC, CMV, devoluções MoM e ranking de transportadoras. Uso de Window Functions, CTEs e agregações condicionais.</p>
+      <div class="proj-langs">
+        <span class="lang-pill">SQL</span><span class="lang-pill">Window Functions</span><span class="lang-pill">CTEs</span>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header"><div class="proj-icon">📊</div></div>
+      <h3><a href="https://github.com/EmanoelInC/dashboard-powerbi-farmacia" target="_blank" style="color:inherit;text-decoration:none">dashboard-powerbi-farmacia</a></h3>
+      <p>Mockup de dashboard executivo no estilo Power BI com 8 painéis — faturamento, margem, CMV, ruptura, ticket médio e curva ABC/D por categoria.</p>
+      <div class="proj-langs">
+        <span class="lang-pill">Python</span><span class="lang-pill">Power BI</span><span class="lang-pill">Farma</span>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header"><div class="proj-icon">⚙️</div></div>
+      <h3><a href="https://github.com/EmanoelInC/automacao-relatorios-operacionais" target="_blank" style="color:inherit;text-decoration:none">automacao-relatorios-operacionais</a></h3>
+      <p>Script que transforma dados brutos em relatório Excel + PNG + resumo executivo automaticamente. Equivalente a ~2 horas de trabalho manual reduzidas a 8 segundos.</p>
+      <div class="proj-langs">
+        <span class="lang-pill">Python</span><span class="lang-pill">Pandas</span><span class="lang-pill">openpyxl</span>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header"><div class="proj-icon">📋</div></div>
+      <h3><a href="https://github.com/EmanoelInC/modelo-excel-avancado" target="_blank" style="color:inherit;text-decoration:none">modelo-excel-avancado</a></h3>
+      <p>Planilha com 4 abas formatadas (Resumo Executivo, CMV & Margem, Ruptura, Power Query) e documentação completa das etapas de transformação em linguagem M.</p>
+      <div class="proj-langs">
+        <span class="lang-pill">Excel Avançado</span><span class="lang-pill">Power Query</span><span class="lang-pill">ETL</span>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header"><div class="proj-icon">🔄</div></div>
+      <h3><a href="https://github.com/EmanoelInC/service-desk-itil" target="_blank" style="color:inherit;text-decoration:none">service-desk-itil</a></h3>
+      <p>Simulador de chamados baseado em ITIL® 4 — calcula SLA por prioridade (P1–P4), MTTR, CSAT e identifica categorias candidatas a registro formal de Problema.</p>
+      <div class="proj-langs">
+        <span class="lang-pill">Python</span><span class="lang-pill">ITIL® 4</span><span class="lang-pill">Gestão de Incidentes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PORTFÓLIO GERAL -->
 <section id="projetos">
   <p class="section-label">Portfólio</p>
   <h2 class="section-title">Projetos no GitHub</h2>
@@ -373,7 +503,7 @@
           <span class="proj-badge">Destaque</span>
         </div>
         <h3>analise-vendas-farmacia</h3>
-        <p>Dashboard de performance comercial para farmácias — vendas, margem, CMV, ticket médio e ruptura por categoria. Dados simulados com base em operações reais do setor.</p>
+        <p>Dashboard de performance comercial para farmácias — vendas, margem, CMV, ticket médio e ruptura por categoria.</p>
         <div class="proj-langs">
           <span class="lang-pill">Python</span><span class="lang-pill">Power BI</span><span class="lang-pill">Pandas</span>
         </div>
@@ -393,9 +523,9 @@
       <div class="proj-card">
         <div class="proj-header"><div class="proj-icon">📉</div></div>
         <h3>curva-abc-varejo-farmaceutico</h3>
-        <p>Classificação ABC/D de SKUs com análise de giro de estoque e identificação de rupturas por categoria terapêutica. Base para decisões de mix e precificação.</p>
+        <p>Classificação ABC/D de SKUs com análise de giro de estoque e identificação de rupturas por categoria terapêutica.</p>
         <div class="proj-langs">
-          <span class="lang-pill">Python</span><span class="lang-pill">Pandas</span><span class="lang-pill">Matplotlib</span>
+          <span class="lang-pill">Python</span><span class="lang-pill">Pandas</span>
         </div>
       </div>
     </a>
@@ -403,63 +533,12 @@
       <div class="proj-card">
         <div class="proj-header"><div class="proj-icon">📋</div></div>
         <h3>relatorios-executivos-powerbi</h3>
-        <p>Templates de relatórios executivos em Power BI com análises MoM, YoY e YTD. Foco em varejo farmacêutico e operações logísticas.</p>
+        <p>Templates de relatórios executivos em Power BI com análises MoM, YoY e YTD. Foco em varejo farmacêutico.</p>
         <div class="proj-langs">
           <span class="lang-pill">Power BI</span><span class="lang-pill">DAX</span><span class="lang-pill">Power Query</span>
         </div>
       </div>
     </a>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- DEMONSTRAÇÃO DE HABILIDADES -->
-<section id="habilidades-projetos">
-  <p class="section-label">Demonstração Técnica</p>
-  <h2 class="section-title">Habilidades em prática</h2>
-  <p class="section-intro">Projetos desenvolvidos para demonstrar domínio técnico em SQL, Power BI, automação, Excel Avançado e gestão de serviços ITIL — cada um com código real e documentação completa.</p>
-  <div class="projects-grid">
-    <div class="proj-card">
-      <div class="proj-header"><div class="proj-icon">🗄️</div></div>
-      <h3><a href="https://github.com/EmanoelInC/analise-sql-operacoes" target="_blank" style="color:inherit;text-decoration:none">analise-sql-operacoes</a></h3>
-      <p>6 consultas SQL analíticas cobrindo SLA, curva ABC, CMV, devoluções MoM e ranking de transportadoras. Uso de Window Functions, CTEs e agregações condicionais.</p>
-      <div class="proj-langs">
-        <span class="lang-pill">SQL</span><span class="lang-pill">Window Functions</span><span class="lang-pill">CTEs</span><span class="lang-pill">SLM</span>
-      </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-header"><div class="proj-icon">📊</div></div>
-      <h3><a href="https://github.com/EmanoelInC/dashboard-powerbi-farmacia" target="_blank" style="color:inherit;text-decoration:none">dashboard-powerbi-farmacia</a></h3>
-      <p>Mockup de dashboard executivo no estilo Power BI com 8 painéis — faturamento, margem, CMV, ruptura, ticket médio e curva ABC/D por categoria.</p>
-      <div class="proj-langs">
-        <span class="lang-pill">Python</span><span class="lang-pill">Power BI</span><span class="lang-pill">Matplotlib</span><span class="lang-pill">Farma</span>
-      </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-header"><div class="proj-icon">⚙️</div></div>
-      <h3><a href="https://github.com/EmanoelInC/automacao-relatorios-operacionais" target="_blank" style="color:inherit;text-decoration:none">automacao-relatorios-operacionais</a></h3>
-      <p>Script que transforma dados brutos em relatório Excel + PNG + resumo executivo automaticamente. Equivalente a ~2 horas de trabalho manual reduzidas a 8 segundos.</p>
-      <div class="proj-langs">
-        <span class="lang-pill">Python</span><span class="lang-pill">Pandas</span><span class="lang-pill">openpyxl</span><span class="lang-pill">Automação</span>
-      </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-header"><div class="proj-icon">📋</div></div>
-      <h3><a href="https://github.com/EmanoelInC/modelo-excel-avancado" target="_blank" style="color:inherit;text-decoration:none">modelo-excel-avancado</a></h3>
-      <p>Planilha com 4 abas formatadas (Resumo Executivo, CMV & Margem, Ruptura, Power Query) e documentação completa das etapas de transformação em linguagem M.</p>
-      <div class="proj-langs">
-        <span class="lang-pill">Excel Avançado</span><span class="lang-pill">Power Query</span><span class="lang-pill">ETL</span><span class="lang-pill">openpyxl</span>
-      </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-header"><div class="proj-icon">🔄</div></div>
-      <h3><a href="https://github.com/EmanoelInC/service-desk-itil" target="_blank" style="color:inherit;text-decoration:none">service-desk-itil</a></h3>
-      <p>Simulador de chamados baseado em ITIL® 4 — calcula SLA por prioridade (P1–P4), MTTR, CSAT e identifica categorias candidatas a registro formal de Problema.</p>
-      <div class="proj-langs">
-        <span class="lang-pill">Python</span><span class="lang-pill">ITIL® 4</span><span class="lang-pill">SLM</span><span class="lang-pill">Gestão de Incidentes</span>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -473,51 +552,27 @@
   <div class="certs-grid">
     <div class="cert-card">
       <span class="cert-issuer">Universidade Veiga de Almeida</span>
-      <span class="cert-name">Bacharelado em Gestão de Tecnologia da Informação</span>
+      <span class="cert-name">GTI: Tecnólogo em Gestão de TI</span>
     </div>
     <div class="cert-card">
       <span class="cert-issuer">Fundação Bradesco</span>
-      <span class="cert-name">Power BI — Análise, Visualização e Modelagem (5 módulos)</span>
+      <span class="cert-name">Power BI — Análise, Visualização e Modelagem</span>
     </div>
     <div class="cert-card">
       <span class="cert-issuer">Febrafar</span>
-      <span class="cert-name">PEC Febrafar — Programa de Excelência Comercial (7 módulos)</span>
+      <span class="cert-name">PEC Febrafar — Excelência Comercial</span>
     </div>
     <div class="cert-card">
       <span class="cert-issuer">Febrafar</span>
-      <span class="cert-name">PAI — Ferramenta Financeira Febrafar (3 módulos)</span>
+      <span class="cert-name">PAI — Ferramenta Financeira Febrafar</span>
     </div>
     <div class="cert-card">
       <span class="cert-issuer">Alura</span>
-      <span class="cert-name">Java — Criando a primeira aplicação</span>
+      <span class="cert-name">Git & GitHub — Colaboração</span>
     </div>
     <div class="cert-card">
       <span class="cert-issuer">Alura</span>
-      <span class="cert-name">HTML & CSS — 4 módulos (Flexbox, Responsividade, Variáveis)</span>
-    </div>
-    <div class="cert-card">
-      <span class="cert-issuer">Alura</span>
-      <span class="cert-name">Git & GitHub — Colaboração em projetos</span>
-    </div>
-    <div class="cert-card">
-      <span class="cert-issuer">Alura</span>
-      <span class="cert-name">Lógica de Programação com JavaScript + Challenge</span>
-    </div>
-    <div class="cert-card">
-      <span class="cert-issuer">Alura</span>
-      <span class="cert-name">Gestão Ágil — Conceitos e práticas de agilidade</span>
-    </div>
-    <div class="cert-card">
-      <span class="cert-issuer">Alura</span>
-      <span class="cert-name">Empreendedorismo — Da ideia ao plano de negócios</span>
-    </div>
-    <div class="cert-card">
-      <span class="cert-issuer">Alura</span>
-      <span class="cert-name">Transição de Carreira para a área de Tecnologia</span>
-    </div>
-    <div class="cert-card">
-      <span class="cert-issuer">Alura</span>
-      <span class="cert-name">ChatGPT — Otimizando resultados com IA</span>
+      <span class="cert-name">Gestão Ágil — Práticas de agilidade</span>
     </div>
   </div>
 </section>
@@ -527,7 +582,7 @@
   <div class="contact-wrap">
     <p class="section-label">Vamos conversar</p>
     <h2 class="section-title">Aberto a novas oportunidades</h2>
-    <p class="contact-sub">Busco desafios onde possa aplicar mentalidade analítica para construir soluções que não apenas relatam o passado, mas antecipam o futuro do negócio — através de dados, processos eficientes e automação inteligente.</p>
+    <p class="contact-sub">Busco desafios onde possa aplicar mentalidade analítica para construir soluções de engenharia e inteligência empresarial — unindo tecnologia, processos robustos e automação inteligente.</p>
     <div class="contact-links">
       <a href="mailto:einaciocavalcante@gmail.com" class="contact-link">
         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -536,10 +591,6 @@
       <a href="https://linkedin.com/in/emanoel-cavalcante-admteclog" class="contact-link" target="_blank">
         <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
         LinkedIn
-      </a>
-      <a href="https://github.com/EmanoelInC" class="contact-link" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-        GitHub
       </a>
     </div>
   </div>
