@@ -104,10 +104,8 @@
 
   /* PROJECTS */
   .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .proj-link-wrapper { text-decoration: none; color: inherit; display: block; transition: transform 0.2s; }
-  .proj-link-wrapper:hover { transform: translateY(-2px); }
-  .proj-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; height: 100%; transition: border-color 0.2s; }
-  .proj-link-wrapper:hover .proj-card { border-color: var(--teal); }
+  .proj-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; transition: border-color 0.2s; }
+  .proj-card:hover { border-color: var(--teal); }
   .proj-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
   .proj-icon { width: 42px; height: 42px; border-radius: 11px; background: var(--teal-light); display: flex; align-items: center; justify-content: center; font-size: 1.15rem; }
   .proj-badge { font-size: 0.68rem; font-weight: 500; background: var(--teal-light); color: var(--teal-dark); padding: 3px 10px; border-radius: 100px; }
@@ -236,12 +234,12 @@
       <p class="tl-role">Analista Administrativo / Logístico</p>
       <p class="tl-company">ID Logistics Brasil · Rio de Janeiro</p>
       <div class="tl-highlight">
-        Focal da operação Ferrero: mais de 2.000 caixas e 30–70 guias de preparação por transferência, com 100% de conformidade inbter nas auditorias internas e externas realizadas durante o período.
+        Focal da operação Ferrero: mais de 2.000 caixas e 30–70 guias de preparação por transferência, com 100% de conformidade em todas as auditorias internas e externas realizadas durante o período.
       </div>
       <div class="tl-desc">
         <p>Gerenciamento completo das operações de Cross-Docking para grandes marcas — Ferrero, Danone, Nutricia e Cologist. Responsabilidades incluíam controle de notas fiscais, inventário de produtos, emissão de guias de preparação, acompanhamento diário da operação com status em porcentagem e controle de expedição.</p>
         <p>Utilizava planilhas Excel e o sistema TMWS para importação de arquivos, abertura de ilhas, download de relatórios, cadastramento de EANs e auditorias de carga. Realizava controle de temperatura via Sitrad, checklists, litígios, ocorrências, conferências de transportadoras, viagens paradas, reentregas e devoluções para fábrica.</p>
-        <p>Também atuou com marcas como Lindt, Natural One, Regina, K-happy, Abbrasil e outras, mantendo contato direto com promotores and auditores.</p>
+        <p>Também atuou com marcas como Lindt, Natural One, Regina, K-happy, Abbrasil e outras, mantendo contato direto com promotores e auditores.</p>
       </div>
       <ul class="tl-bullets">
         <li>Embaixador do programa MyIDea desde 2023 — promovendo engajamento e implementação de ideias</li>
@@ -367,58 +365,41 @@
   <h2 class="section-title">Projetos no GitHub</h2>
   <p class="section-intro">Projetos práticos com dados simulados baseados em experiências reais — do varejo farmacêutico à logística de cross-docking.</p>
   <div class="projects-grid">
-    
-    <!-- CARD 1 CLICÁVEL -->
-    <a href="https://github.com/EmanoelInC/analise-vendas-farmacia" class="proj-link-wrapper" target="_blank">
-      <div class="proj-card">
-        <div class="proj-header">
-          <div class="proj-icon">📊</div>
-          <span class="proj-badge">Destaque</span>
-        </div>
-        <h3>analise-vendas-farmacia</h3>
-        <p>Dashboard de performance comercial para farmácias — vendas, margem, CMV, ticket médio e ruptura por categoria. Dados simulados com base em operações reais do setor.</p>
-        <div class="proj-langs">
-          <span class="lang-pill">Python</span><span class="lang-pill">Power BI</span><span class="lang-pill">Pandas</span>
-        </div>
+    <div class="proj-card">
+      <div class="proj-header">
+        <div class="proj-icon">📊</div>
+        <span class="proj-badge">Destaque</span>
       </div>
-    </a>
-    
-    <!-- CARD 2 CLICÁVEL -->
-    <a href="https://github.com/EmanoelInC/dashboard-logistica-crossdocking" class="proj-link-wrapper" target="_blank">
-      <div class="proj-card">
-        <div class="proj-header"><div class="proj-icon">🚛</div></div>
-        <h3>dashboard-logistica-crossdocking</h3>
-        <p>KPIs operacionais de cross-docking: SLA de expedição, conformidade de carga, controle de temperatura e ocorrências por transportadora.</p>
-        <div class="proj-langs">
-          <span class="lang-pill">Python</span><span class="lang-pill">Excel</span>
-        </div>
+      <h3>analise-vendas-farmacia</h3>
+      <p>Dashboard de performance comercial para farmácias — vendas, margem, CMV, ticket médio e ruptura por categoria. Dados simulados com base em operações reais do setor.</p>
+      <div class="proj-langs">
+        <span class="lang-pill">Python</span><span class="lang-pill">Power BI</span><span class="lang-pill">Pandas</span>
       </div>
-    </a>
-    
-    <!-- CARD 3 CLICÁVEL -->
-    <a href="https://github.com/EmanoelInC/curva-abc-varejo-farmaceutico" class="proj-link-wrapper" target="_blank">
-      <div class="proj-card">
-        <div class="proj-header"><div class="proj-icon">📉</div></div>
-        <h3>curva-abc-varejo-farmaceutico</h3>
-        <p>Classificação ABC/D de SKUs com análise de giro de estoque e identificação de rupturas por categoria terapêutica. Base para decisões de mix e precificação.</p>
-        <div class="proj-langs">
-          <span class="lang-pill">Python</span><span class="lang-pill">Pandas</span><span class="lang-pill">Matplotlib</span>
-        </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header"><div class="proj-icon">🚛</div></div>
+      <h3>dashboard-logistica-crossdocking</h3>
+      <p>KPIs operacionais de cross-docking: SLA de expedição, conformidade de carga, controle de temperatura e ocorrências por transportadora.</p>
+      <div class="proj-langs">
+        <span class="lang-pill">Python</span><span class="lang-pill">Excel</span>
       </div>
-    </a>
-    
-    <!-- CARD 4 CLICÁVEL -->
-    <a href="https://github.com/EmanoelInC/relatorios-executivos-powerbi" class="proj-link-wrapper" target="_blank">
-      <div class="proj-card">
-        <div class="proj-header"><div class="proj-icon">📋</div></div>
-        <h3>relatorios-executivos-powerbi</h3>
-        <p>Templates de relatórios executivos em Power BI com análises MoM, YoY e YTD. Foco em varejo farmacêutico e operações logísticas.</p>
-        <div class="proj-langs">
-          <span class="lang-pill">Power BI</span><span class="lang-pill">DAX</span><span class="lang-pill">Power Query</span>
-        </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-header"><div class="proj-icon">📉</div></div>
+      <h3>curva-abc-varejo-farmaceutico</h3>
+      <p>Classificação ABC/D de SKUs com análise de giro de estoque e identificação de rupturas por categoria terapêutica. Base para decisões de mix e precificação.</p>
+      <div class="proj-langs">
+        <span class="lang-pill">Python</span><span class="lang-pill">Pandas</span><span class="lang-pill">Matplotlib</span>
       </div>
-    </a>
-    
+    </div>
+    <div class="proj-card">
+      <div class="proj-header"><div class="proj-icon">📋</div></div>
+      <h3>relatorios-executivos-powerbi</h3>
+      <p>Templates de relatórios executivos em Power BI com análises MoM, YoY e YTD. Foco em varejo farmacêutico e operações logísticas.</p>
+      <div class="proj-langs">
+        <span class="lang-pill">Power BI</span><span class="lang-pill">DAX</span><span class="lang-pill">Power Query</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -537,7 +518,7 @@
   <div class="contact-wrap">
     <p class="section-label">Vamos conversar</p>
     <h2 class="section-title">Aberto a novas oportunidades</h2>
-    <p class="contact-sub">Busco desafios onde possa apply mentalidade analítica para construir soluções que não apenas relatam o passado, mas antecipam o futuro do negócio — através de dados, processos eficientes e automação inteligente.</p>
+    <p class="contact-sub">Busco desafios onde possa aplicar mentalidade analítica para construir soluções que não apenas relatam o passado, mas antecipam o futuro do negócio — através de dados, processos eficientes e automação inteligente.</p>
     <div class="contact-links">
       <a href="mailto:einaciocavalcante@gmail.com" class="contact-link">
         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
