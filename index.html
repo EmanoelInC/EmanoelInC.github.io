@@ -104,7 +104,8 @@
 
   /* PROJECTS */
   .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .proj-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; transition: border-color 0.2s; }
+  .proj-link-wrapper { text-decoration: none; color: inherit; display: block; }
+  .proj-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; transition: border-color 0.2s; height: 100%; }
   .proj-card:hover { border-color: var(--teal); }
   .proj-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
   .proj-icon { width: 42px; height: 42px; border-radius: 11px; background: var(--teal-light); display: flex; align-items: center; justify-content: center; font-size: 1.15rem; }
@@ -210,7 +211,7 @@
       </div>
       <div class="tl-desc">
         <p>Responsável por gerar diagnósticos precisos para orientar planos de ação e melhoria de resultados em toda a rede. O trabalho envolveu análise profunda de indicadores comerciais e operacionais, com foco em vendas, margem, CMV, estoque e ruptura.</p>
-        <p>Desenvolveu relatórios executivos e dashboards visuais para suporte à tomada de decisão, além de treinar equipes e acompanhar metas de forma contínua.</p>
+        <p>Desenvolveu relatórios executivos e dashboards visuais para suporte à tomada de decisão, além de treinar equipes ogaria e comerciais e acompanhamento direcionado de metas de performance.</p>
       </div>
       <ul class="tl-bullets">
         <li>Estudos de rentabilidade por categoria, produto e canal de venda</li>
@@ -365,41 +366,49 @@
   <h2 class="section-title">Projetos no GitHub</h2>
   <p class="section-intro">Projetos práticos com dados simulados baseados em experiências reais — do varejo farmacêutico à logística de cross-docking.</p>
   <div class="projects-grid">
-    <div class="proj-card">
-      <div class="proj-header">
-        <div class="proj-icon">📊</div>
-        <span class="proj-badge">Destaque</span>
+    <a href="https://github.com/EmanoelInC/analise-vendas-farmacia" class="proj-link-wrapper" target="_blank">
+      <div class="proj-card">
+        <div class="proj-header">
+          <div class="proj-icon">📊</div>
+          <span class="proj-badge">Destaque</span>
+        </div>
+        <h3>analise-vendas-farmacia</h3>
+        <p>Dashboard de performance comercial para farmácias — vendas, margem, CMV, ticket médio e ruptura por categoria. Dados simulados com base em operações reais do setor.</p>
+        <div class="proj-langs">
+          <span class="lang-pill">Python</span><span class="lang-pill">Power BI</span><span class="lang-pill">Pandas</span>
+        </div>
       </div>
-      <h3>analise-vendas-farmacia</h3>
-      <p>Dashboard de performance comercial para farmácias — vendas, margem, CMV, ticket médio e ruptura por categoria. Dados simulados com base em operações reais do setor.</p>
-      <div class="proj-langs">
-        <span class="lang-pill">Python</span><span class="lang-pill">Power BI</span><span class="lang-pill">Pandas</span>
+    </a>
+    <a href="https://github.com/EmanoelInC/dashboard-logistica-crossdocking" class="proj-link-wrapper" target="_blank">
+      <div class="proj-card">
+        <div class="proj-header"><div class="proj-icon">🚛</div></div>
+        <h3>dashboard-logistica-crossdocking</h3>
+        <p>KPIs operacionais de cross-docking: SLA de expedição, conformidade de carga, controle de temperatura e ocorrências por transportadora.</p>
+        <div class="proj-langs">
+          <span class="lang-pill">Python</span><span class="lang-pill">Excel</span>
+        </div>
       </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-header"><div class="proj-icon">🚛</div></div>
-      <h3>dashboard-logistica-crossdocking</h3>
-      <p>KPIs operacionais de cross-docking: SLA de expedição, conformidade de carga, controle de temperatura e ocorrências por transportadora.</p>
-      <div class="proj-langs">
-        <span class="lang-pill">Python</span><span class="lang-pill">Excel</span>
+    </a>
+    <a href="https://github.com/EmanoelInC/curva-abc-varejo-farmaceutico" class="proj-link-wrapper" target="_blank">
+      <div class="proj-card">
+        <div class="proj-header"><div class="proj-icon">📉</div></div>
+        <h3>curva-abc-varejo-farmaceutico</h3>
+        <p>Classificação ABC/D de SKUs com análise de giro de estoque e identificação de rupturas por categoria terapêutica. Base para decisões de mix e precificação.</p>
+        <div class="proj-langs">
+          <span class="lang-pill">Python</span><span class="lang-pill">Pandas</span><span class="lang-pill">Matplotlib</span>
+        </div>
       </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-header"><div class="proj-icon">📉</div></div>
-      <h3>curva-abc-varejo-farmaceutico</h3>
-      <p>Classificação ABC/D de SKUs com análise de giro de estoque e identificação de rupturas por categoria terapêutica. Base para decisões de mix e precificação.</p>
-      <div class="proj-langs">
-        <span class="lang-pill">Python</span><span class="lang-pill">Pandas</span><span class="lang-pill">Matplotlib</span>
+    </a>
+    <a href="https://github.com/EmanoelInC/relatorios-executivos-powerbi" class="proj-link-wrapper" target="_blank">
+      <div class="proj-card">
+        <div class="proj-header"><div class="proj-icon">📋</div></div>
+        <h3>relatorios-executivos-powerbi</h3>
+        <p>Templates de relatórios executivos em Power BI com análises MoM, YoY e YTD. Foco em varejo farmacêutico e operações logísticas.</p>
+        <div class="proj-langs">
+          <span class="lang-pill">Power BI</span><span class="lang-pill">DAX</span><span class="lang-pill">Power Query</span>
+        </div>
       </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-header"><div class="proj-icon">📋</div></div>
-      <h3>relatorios-executivos-powerbi</h3>
-      <p>Templates de relatórios executivos em Power BI com análises MoM, YoY e YTD. Foco em varejo farmacêutico e operações logísticas.</p>
-      <div class="proj-langs">
-        <span class="lang-pill">Power BI</span><span class="lang-pill">DAX</span><span class="lang-pill">Power Query</span>
-      </div>
-    </div>
+    </a>
   </div>
 </section>
 
